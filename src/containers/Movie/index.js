@@ -9,7 +9,7 @@ class MovieContainer extends React.Component {
         data: []
     };
   }
-  loadResult() {
+  loadMovie() {
     const id = this.props.params.id;
     const requestUrl = `${API_URL}movie/${id}?api_key=${API_KEY}`;
     fetch(requestUrl).then((response)=>{
@@ -21,7 +21,7 @@ class MovieContainer extends React.Component {
     });
   }
   componentDidMount() {
-    this.loadResult();
+    this.loadMovie();
   }
   render() {
     let hero_image = this.state.data.backdrop_path;
