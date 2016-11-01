@@ -1,0 +1,144 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900";
+
+body {
+  background: #312929;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+}
+
+#Header {
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  display: flex;
+  padding: 40px;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+#logo a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#Navigation ul {
+  display: flex;
+  height: 37px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#Navigation ul li {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 7px 10px;
+  font-size: 14px;
+  transition: background .2s ease;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+#Navigation ul li:hover {
+  background: #00307f;
+  cursor: pointer;
+}
+
+.movies {
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 4;
+}
+.movies h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+.movies .movies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  width: calc(100vw - 80px);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.movies-item {
+  width: calc(20% - 10px);
+  height: 200px;
+  background-color: #000000;
+  flex: 1 0 auto;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: background 1s ease;
+  cursor: pointer;
+}
+.movies-item:nth-child(n+6) {
+  margin-top: 20px;
+}
+.movies-item:last-child {
+  margin-right: 0;
+}
+
+.movies-item:hover {
+  background-size: 120%;
+}
