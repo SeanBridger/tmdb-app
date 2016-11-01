@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { API_URL, API_KEY, IMAGE_URL } from '../../config';
+import { API_URL, API_KEY, BACKDROP_URL } from '../../config';
 import MovieInfo from '../../components/MovieInfo';
 
 class MovieContainer extends React.Component {
@@ -28,7 +28,7 @@ class MovieContainer extends React.Component {
     if(!hero_image) {
       hero_image = 'http://placehold.it/2000x1500';
     } else {
-      hero_image = `${IMAGE_URL}${this.state.data.backdrop_path}`;
+      hero_image = `${BACKDROP_URL}${this.state.data.backdrop_path}`;
     }
 
     const { title, release_date, overview } = this.state.data;
