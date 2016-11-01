@@ -19,13 +19,16 @@ const Movies = ({max, movies, title}) => {
   }
   return (
     <div className="movies">
-      <input placeholder="Search movies" />
-      <h1>Results</h1>
+      <h1>{title}</h1>
       <div className="movies-wrapper">
         {items}
       </div>
     </div>
   );
+};
+
+Movies.defaultProps = {
+  max: 5
 };
 
 export default Movies;
