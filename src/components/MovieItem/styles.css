@@ -1,0 +1,23 @@
+.movies-item {
+  width: calc(20% - 10px);
+  height: 200px;
+  background-color: #000000;
+  flex: 1 0 auto;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: background 1s ease;
+  cursor: pointer;
+}
+.movies-item:nth-child(n+6) {
+  margin-top: 20px;
+}
+.movies-item:last-child {
+  margin-right: 0;
+}
+
+.movies-item:hover {
+  background-size: 120%;
+}

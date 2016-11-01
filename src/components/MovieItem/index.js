@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import './styles.css';
 
 const MovieItem = ({id, poster}) => {
   const url = `/movie/${id}`;

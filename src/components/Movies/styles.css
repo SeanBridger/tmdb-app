@@ -1,0 +1,20 @@
+.movies {
+  padding: 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 4;
+}
+.movies h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+.movies .movies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  width: calc(100vw - 80px);
+  box-sizing: border-box;
+  justify-content: space-between;
+}

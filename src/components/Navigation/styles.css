@@ -1,0 +1,22 @@
+#Navigation ul {
+  display: flex;
+  height: 37px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+#Navigation ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 7px 10px;
+  font-size: 14px;
+  transition: background .2s ease;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+#Navigation ul li a:hover {
+  background: #00307f;
+  cursor: pointer;
+}

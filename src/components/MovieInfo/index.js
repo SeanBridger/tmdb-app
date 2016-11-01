@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 import { browserHistory } from 'react-router';
+import './styles.css';
 
 const MovieInfo = ({title, release_date, overview, backdrop}) => {
   return (
-    <div id="mainInfo" style={{backgroundImage: `url(${backdrop})`}}>
+    <div id="movieInfo" style={{backgroundImage: `url(${backdrop})`}}>
       <div className="details">
         <div className="btn" onClick={browserHistory.goBack}>Back</div>
         <h1>{title}</h1>

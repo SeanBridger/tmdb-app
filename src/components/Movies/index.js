@@ -1,20 +1,21 @@
 import React, { PropTypes } from 'react';
 import MovieItem from '../MovieItem';
 import { IMAGE_URL } from '../../config';
+import './styles.css';
 
 const Movies = ({max, movies, title}) => {
   let items = '';
   if(movies) {
     items = movies.slice(0, max).map(function(item, i) {
       let poster = item.poster_path;
-        if(!poster) {
-          poster = 'http://placehold.it/600x900';
-        } else {
-          poster = `${IMAGE_URL}${poster}`;
-        }
-        return (
-          <MovieItem key={item.id} id={item.id} poster={poster} />
-        );
+      if(!poster) {
+        poster = 'http://placehold.it/600x900';
+      } else {
+        poster = `${IMAGE_URL}${poster}`;
+      }
+      return (
+        <MovieItem key={item.id} id={item.id} poster={poster} />
+      );
     });
   }
   return (
@@ -29,13 +30,13 @@ const Movies = ({max, movies, title}) => {
 
 Movies.defaultProps = {
   max: '5',
-  results: [],
+  movies: [],
   title: ''
 };
 
 Movies.propTypes = {
   max: PropTypes.string.isRequired,
-  results: PropTypes.array.isRequired,
+  movies: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
 };
 

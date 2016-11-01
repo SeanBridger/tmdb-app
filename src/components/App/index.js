@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Header from '../Header';
+import './reset.css';
 import './styles.css';
 
 const App = ({children}) => {

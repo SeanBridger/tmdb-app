@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../Navigation';
 import { Link } from 'react-router';
+import './styles.css';
 
 const Header = () => {
   return (
