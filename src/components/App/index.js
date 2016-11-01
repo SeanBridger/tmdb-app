@@ -1,15 +1,13 @@
 import React from 'react';
-
 import Header from '../Header';
-import SearchContainer from '../../containers/Search';
 
 import './styles.css';
 
-const App = () => {
+const App = ({children}) => {
   return (
     <div>
       <Header />
-      <SearchContainer />
+      {children}
     </div>
   );
 };

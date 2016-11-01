@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const MovieItem = ({id, poster}) => {
   const url = `/movie/${id}`;
   return (
-      <a href={url} className="movies-item" style={{backgroundImage: 'url(' + poster + ')'}}></a>
+      <Link to={url} className="movies-item" style={{backgroundImage: 'url(' + poster + ')'}}></Link>
   );
 };
 
