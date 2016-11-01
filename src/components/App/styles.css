@@ -82,7 +82,7 @@ body {
   padding: 0 10px;
 }
 
-#Navigation ul li {
+#Navigation ul li a {
   color: #FFF;
   text-decoration: none;
   font-weight: 400;
@@ -93,7 +93,7 @@ body {
   margin-right: 5px;
 }
 
-#Navigation ul li:hover {
+#Navigation ul li a:hover {
   background: #00307f;
   cursor: pointer;
 }
@@ -137,8 +137,4 @@ body {
 }
 .movies-item:last-child {
   margin-right: 0;
-}
-
-.movies-item:hover {
-  background-size: 120%;
 }
