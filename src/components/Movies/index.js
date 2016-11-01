@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 import MovieItem from '../MovieItem';
-import { IMAGE_URL } from '../../config';
+import { IMAGE_URL, PLACEHOLDER_URL } from '../../config';
 import './styles.css';
 
 const Movies = ({max, movies, title}) => {
@@ -10,7 +10,7 @@ const Movies = ({max, movies, title}) => {
     items = movies.slice(0, max).map(function(item, i) {
       let poster = item.poster_path;
       if(!poster) {
-        poster = 'http://placehold.it/300x450';
+        poster = `${PLACEHOLDER_URL}/300x450`;
       } else {
         poster = `${IMAGE_URL}${poster}`;
       }

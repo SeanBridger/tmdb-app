@@ -10,7 +10,7 @@ class MoviesContainer extends React.Component {
     };
   }
   loadMovies() {
-    const requestUrl = `${API_URL}${this.props.url}&api_key=${API_KEY}`;
+    const requestUrl = `${API_URL}/${this.props.url}&api_key=${API_KEY}`;
     fetch(requestUrl).then((response)=>{
         return response.json();
     }).then((data)=>{
