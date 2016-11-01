@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import Navigation from './';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Navigation />, div);
+describe('<Navigation />', () => {
+  it('renders without crashing', () => {
+    shallow(<Navigation />);
+  });
 });

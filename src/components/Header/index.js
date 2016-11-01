@@ -4,7 +4,7 @@ import Navigation from '../Navigation';
 const Header = () => {
   return (
     <header id="Header">
-      <div id="logo">
+      <div className="logo">
 				<h1><a href="/">TMDB</a></h1>
 			</div>
       <Navigation />

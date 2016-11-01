@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../Header';
-import Movies from '../Movies';
+import MoviesContainer from '../../containers/Movies';
 
 import './styles.css';
 
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Movies />
+      <MoviesContainer max='5'/>
     </div>
   );
 };

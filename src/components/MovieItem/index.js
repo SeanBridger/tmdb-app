@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MovieItem = ({id}) => {
+const MovieItem = ({id, poster}) => {
   const url = `/movie/${id}`;
   return (
-      <a href={url} className="movies-item">Movie {id}</a>
+      <a href={url} className="movies-item" style={{backgroundImage: 'url(' + poster + ')'}}></a>
   );
 };
 

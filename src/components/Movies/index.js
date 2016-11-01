@@ -1,23 +1,28 @@
 import React from 'react';
-
 import MovieItem from '../MovieItem';
 
-const Movies = () => {
+const Movies = ({max, movies, title}) => {
+  let items = '';
+  if(movies) {
+    items = movies.slice(0, max).map(function(item, i) {
+      console.log('here');
+      let poster = item.poster_path;
+        if(!poster) {
+          poster = 'http://placehold.it/600x900';
+        } else {
+          poster = `http://image.tmdb.org/t/p/original${poster}`;
+        }
+        return (
+          <MovieItem key={item.id} id={item.id} poster={poster} />
+        );
+    });
+  }
   return (
     <div className="movies">
       <input placeholder="Search movies" />
       <h1>Results</h1>
       <div className="movies-wrapper">
-        <MovieItem id="1" />
-        <MovieItem id="2" />
-        <MovieItem id="3" />
-        <MovieItem id="4" />
-        <MovieItem id="5" />
-        <MovieItem id="6" />
-        <MovieItem id="7" />
-        <MovieItem id="8" />
-        <MovieItem id="9" />
-        <MovieItem id="10" />
+        {items}
       </div>
     </div>
   );
