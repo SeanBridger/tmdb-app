@@ -4,6 +4,6 @@ import MoviesContainer from './';
 
 describe('<MoviesContainer />', () => {
   it('renders without crashing', () => {
-    shallow(<MoviesContainer max="5" />);
+    shallow(<MoviesContainer title="Test Title" url="something" max="5" />);
   });
 });

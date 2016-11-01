@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { API_URL, API_KEY, IMAGE_URL } from '../../config';
 import MovieInfo from '../../components/MovieInfo';
 
@@ -36,6 +36,10 @@ class MovieContainer extends React.Component {
       <MovieInfo backdrop={hero_image} title={title} overview={overview} release_date={release_date} />
     )
   }
+};
+
+MovieContainer.propTypes = {
+  params: PropTypes.object.isRequired
 };
 
 export default MovieContainer;

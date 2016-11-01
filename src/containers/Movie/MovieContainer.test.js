@@ -4,6 +4,6 @@ import MovieContainer from './';
 
 describe('<MovieContainer />', () => {
   it('renders without crashing', () => {
-    shallow(<MovieContainer />);
+    shallow(<MovieContainer params={ { id: 1 } } />);
   });
 });

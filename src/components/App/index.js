@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from '../Header';
-
 import './styles.css';
 
 const App = ({children}) => {
@@ -10,6 +9,10 @@ const App = ({children}) => {
       {children}
     </div>
   );
+};
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
 };
 
 export default App;

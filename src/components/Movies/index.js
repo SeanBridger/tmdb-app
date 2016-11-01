@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import MovieItem from '../MovieItem';
 import { IMAGE_URL } from '../../config';
 
@@ -28,7 +28,15 @@ const Movies = ({max, movies, title}) => {
 };
 
 Movies.defaultProps = {
-  max: 5
+  max: '5',
+  results: [],
+  title: ''
+};
+
+Movies.propTypes = {
+  max: PropTypes.string.isRequired,
+  results: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Movies;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Movies from '../../components/Movies';
 import { API_KEY, API_URL } from '../../config';
 
@@ -40,6 +40,12 @@ class MoviesContainer extends React.Component {
     }
     return false;
   }
+};
+
+MoviesContainer.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  max: PropTypes.string.isRequired
 };
 
 export default MoviesContainer;

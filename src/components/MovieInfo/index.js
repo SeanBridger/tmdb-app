@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { browserHistory } from 'react-router';
 
 const MovieInfo = ({title, release_date, overview, backdrop}) => {
@@ -14,6 +14,20 @@ const MovieInfo = ({title, release_date, overview, backdrop}) => {
       <div className="overlayBottom"></div>
     </div>
   );
+};
+
+MovieInfo.defaultProps = {
+  title: '',
+  release_date: '',
+  overview: '',
+  backdrop: ''
+};
+
+MovieInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  release_date: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
+  backdrop: PropTypes.string.isRequired,
 };
 
 export default MovieInfo;
