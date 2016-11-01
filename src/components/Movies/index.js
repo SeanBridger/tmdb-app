@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import MovieItem from '../MovieItem';
 import { IMAGE_URL } from '../../config';
 import './styles.css';
@@ -9,7 +10,7 @@ const Movies = ({max, movies, title}) => {
     items = movies.slice(0, max).map(function(item, i) {
       let poster = item.poster_path;
       if(!poster) {
-        poster = 'http://placehold.it/600x900';
+        poster = 'http://placehold.it/300x450';
       } else {
         poster = `${IMAGE_URL}${poster}`;
       }
@@ -22,7 +23,9 @@ const Movies = ({max, movies, title}) => {
     <div className="movies">
       <h1>{title}</h1>
       <div className="movies-wrapper">
-        {items}
+        <CSSTransitionGroup transitionName="movies-item-trans" transitionEnterTimeout={200} transitionLeaveTimeout={200} >
+          {items}
+        </CSSTransitionGroup>
       </div>
     </div>
   );

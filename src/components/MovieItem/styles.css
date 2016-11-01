@@ -21,3 +21,28 @@
 .movies-item:hover {
   background-size: 120%;
 }
+
+@keyframes moviesFadeIn { from { opacity:0; } to { opacity:1; } }
+
+.movies-item-trans-enter {
+  opacity: 0.01;
+}
+.movies-item-trans-enter.movies-item-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.movies-item-trans-leave {
+  opacity: 1;
+}
+.movies-item-trans-leave.movies-item-leave-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
+}
+
+.movies-item {
+  opacity:0;
+  animation:moviesFadeIn ease-in 1;
+  animation-duration:0.5s;
+  animation-fill-mode: forwards;
+}
